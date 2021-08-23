@@ -29,7 +29,7 @@ public class HelloWorldApplication {
 
 	@Bean
 	@StepScope
-	public HelloWorldTasklet helloWorldTasklet(@Value("#{jobParameters['name']}")String name){
+	public HelloWorldTasklet helloWorldTasklet(@Value("#{jobParameters['name']}") final String name){
 		return  new HelloWorldTasklet(name);
 	}
 
